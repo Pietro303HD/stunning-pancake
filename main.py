@@ -16,8 +16,16 @@ class InputSelect:
     self.options = options
 
   def input(self):
-    for option in options:
-      print(f"[0] {option}")
+    for option in self.options:
+      index = self.options.index(option)
+      print(f"[{index}] {option}")
+
+    index = int(input("=> "))
+    return self.options[index], index
+
+
+pancakeSelect = InputSelect(["Create a new pancake.", "Import already existing pancake."])
 
 print("Welcome to 'Pancake Simulator 2022'.")
 print("What would you like to do?")
+pancakeSelect.input()
