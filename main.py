@@ -1,4 +1,9 @@
+class Stack:
+  # Holds a value;
+  def __init__(self, value):
+
 class Pancake:
+  # Contains multiple stacks;
   def __init__(self):
     self.stacks = []
 
@@ -6,6 +11,7 @@ class Pancake:
     self.stacks.append(stack)
 
 class InputSelect:
+  # Selection menu using input();
   def __init__(self, options):
     self.options = options
 
